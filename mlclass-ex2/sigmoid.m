@@ -4,6 +4,7 @@ function g = sigmoid(z)
 
 % You need to return the following variables correctly 
 g = zeros(size(z));
+h = ones(size(z));
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the sigmoid of each value of z (z can be a matrix,
@@ -11,7 +12,9 @@ g = zeros(size(z));
 
 
 
+%g = 1 ./ (1 .- exp(z .* -1));
 
+g = h ./ (h + (exp(-z)));
 
 % =============================================================
 
